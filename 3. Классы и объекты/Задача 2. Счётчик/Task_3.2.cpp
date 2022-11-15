@@ -5,22 +5,24 @@ class Counter
 {
 public:
     Counter();
-
-private:
-    int step;
+    Counter(int x);
+    void increment();
+    void decrement();
+    void print();
     void selection();
     void set_step();
+
+    private:
+    int step;
+  
 };
 
-Counter::Counter():step{1}
-{
-    set_step();
-    selection();
-}
+Counter::Counter():step{1}{}
+
+Counter::Counter(int x):step{ x } {}
 
 void Counter::set_step()
 {
-
 
     std::cout << "Вы хотите указать начальное значение счётчика? Введите да или нет: ";
     std::string str; std::cin >> str;
@@ -31,6 +33,21 @@ void Counter::set_step()
         std::cin >> step;
     }
 
+}
+
+void Counter::increment()
+{
+    step++;
+}
+
+void Counter::decrement()
+{
+    step--;
+}
+
+void Counter::print()
+{
+    std::cout << step << "\n";
 }
 
 void Counter::selection()
@@ -45,9 +62,9 @@ void Counter::selection()
 
         switch (command)
         {
-        case '+': step++; break;
-        case '-': step--; break;
-        case '=': std::cout << step << "\n"; break;
+        case '+': increment(); break;
+        case '-': decrement(); break;
+        case '=': print(); break;
         case 'х': std::cout << "До свидания!"; out = true; break;
 
         default: std::cout << "Я хз Что Это за команда\n"; break;
@@ -63,6 +80,10 @@ int main()
     SetConsoleOutputCP(1251);
 
     Counter One;
+
+    One.set_step();
+    One.selection();
+
 
     std::cout << "\n";
     system("pause");
