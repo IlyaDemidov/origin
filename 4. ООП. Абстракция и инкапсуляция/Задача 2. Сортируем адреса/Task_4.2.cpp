@@ -104,14 +104,14 @@ void sort_city_name(Address* mas, const int& size_mas)
 
     for (int i = 0; i < size_mas - 1; ++i)
     {
-        int index{ i };
 
         for (int j = i + 1; j < size_mas; ++j)
         {
-            if (mas[i].get_city_name() > mas[j].get_city_name()) index = j;
+
+            if (mas[i].get_city_name() > mas[j].get_city_name()) swap_Address(mas[i], mas[j]);
+
         }
-        
-        swap_Address(mas[i], mas[index]);
+
     }
 }
 
