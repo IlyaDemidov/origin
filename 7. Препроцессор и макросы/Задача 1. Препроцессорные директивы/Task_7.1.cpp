@@ -1,8 +1,14 @@
 ﻿#include <iostream>
 #include <Windows.h>
 
-#define MODE 1
-#define add(x, y) ((x) + (y))
+#define MODE 3
+#ifndef MODE
+#error
+#endif
+
+#if MODE == 1
+    int add(int x, int y) { return x + y; }   
+#endif
 
 int main()
 {
@@ -27,10 +33,7 @@ int main()
 
 #else
     std::cout << "Неизвестный режим. Завершение работы" << "\n";
-    
-//не смог использова #error при помещение его после #else пишет деректива error 
-
-#endif 
+#endif
 
 
     std::cout << "\n";
