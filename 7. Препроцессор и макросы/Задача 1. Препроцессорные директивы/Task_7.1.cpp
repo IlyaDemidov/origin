@@ -1,9 +1,10 @@
 ﻿#include <iostream>
 #include <Windows.h>
 
-#define MODE 3
-#ifndef MODE
-#error
+#define MOD
+
+#if !defined (MODE)
+#error MODE не определён
 #endif
 
 #if MODE == 1
