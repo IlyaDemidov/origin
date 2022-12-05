@@ -1,13 +1,13 @@
 ﻿#include <iostream>
 #include <Windows.h>
 #include <string>
-#include <exception>
+#include <stdexcept>
 
 int function(const std::string& str,const int& forbidden_length)
 {
     size_t str_length{ str.length() };
 
-    if (str_length == forbidden_length) throw "bad_length";
+    if (str_length == forbidden_length) throw std::runtime_error ("Вы ввели слово запретной длины! До свидания");
 
     return str_length;
 }
@@ -33,9 +33,9 @@ int main()
             function(str, forbidden_length);
         }
 
-        catch(const char* str)
+        catch(const std::exception& exception)
         {
-            std::cout << "Вы ввели слово запретной длины! До свидания";
+            std::cerr << exception.what() << '\n';
             break;
         }
         
