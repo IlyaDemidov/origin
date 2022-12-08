@@ -29,20 +29,11 @@ public:
 
 	auto operator <=> (const Fraction& frac) const = default;
 
-	friend const std::ostream& operator << (std::ostream& out, const Fraction& frac)
+	friend  std::ostream& operator << (std::ostream& out, const Fraction& frac)
 	{
 		out << frac.numerator_ << "/" << frac.denominator_;
 
 		return out;
-	}
-
-	friend const std::ostream& operator << (std::ostream& out, const char* x)
-	{
-		
-		out << x;
-
-		return out;
-		
 	}
 
 	friend std::istream& operator >>(std::istream& in, Fraction& frac)
@@ -161,17 +152,16 @@ int main()
 	std::cin >> f1;
 	std::cin >> f2;
 
-	std::cout << f1 << " + " << f2 << " = " << f1 + f2;
-	std::cout << f1 - f2;
-	std::cout << f1 * f2;
-	std::cout << f1 / f2;
+	std::cout << f1 << " + " << f2 << " = " << f1 + f2 << "\n";
+	std::cout << f1 << " - " << f2 << " = " << f1 - f2 << "\n";
+	std::cout << f1 << " * " << f2 << " = " << f1 * f2 << "\n";
+	std::cout << f1 << " / " << f2 << " = " << f1 / f2 << "\n";
+	std::cout << f1 << " * " << f2 << " = " << ++f1 * f2 << "\n";
+	std::cout << "Значение дроби 1 = " << f1 << "\n";
+	std::cout << f1 << " * " << f2 << " = " << f1-- * f2 << "\n";
+	std::cout << "Значение дроби 1 = " << f1 << "\n";
 
-	std::cout << ++f1 * f2;
-	std::cout << f1;
-	
-	std::cout << f1-- * f2;
-	std::cout << f1;
-	
+
 
 	std::cout << "\n";
 	system("pause");
