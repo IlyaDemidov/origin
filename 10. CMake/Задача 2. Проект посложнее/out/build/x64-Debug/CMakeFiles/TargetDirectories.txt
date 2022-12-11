@@ -1,0 +1,3 @@
+C:/Users/dog62/Desktop/origin/10. CMake/Задача 2. Проект посложнее/out/build/x64-Debug/CMakeFiles/Cmake_Figure.dir
+C:/Users/dog62/Desktop/origin/10. CMake/Задача 2. Проект посложнее/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/dog62/Desktop/origin/10. CMake/Задача 2. Проект посложнее/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
