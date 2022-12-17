@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(Leaver_Dyn_Lib_CMake)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(LeaverDynLibCMake SHARED Library_Dynamic.h Library_Dynamic.cpp)
+add_executable(LeaverExe Leaver_Client.cpp)
+target_link_libraries(LeaverExe LeaverDynLibCMake)
