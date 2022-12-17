@@ -1,6 +1,5 @@
 #pragma once
 
-//#include <iostream>
 #include "Figure.h"
 
 class Quadrangle : public Figure
@@ -14,6 +13,6 @@ public:
         const int A = 50, const int B = 60, const int C = 70, const int D = 80)
         : Figure(name), c_a{ a }, c_b{ b }, c_c{ c }, c_d{ d }, c_A{ A }, c_B{ B }, c_C{ C }, c_D{ D } {}
 
-     void print_class() override;
+     FIGURE_LIB_API void print_class() override;
 
 };

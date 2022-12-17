@@ -8,13 +8,13 @@
 
 #include <iostream>
 
-class Figure
+class Figure 
 {
 private:
     std::string c_name;
 
 public:
-    FIGURE_LIB_API Figure(const std::string& name = "Фигура") :c_name{ name } {}
-    const std::string get_name() const;
-    virtual void print_class();
+     Figure(const std::string& name = "Фигура") :c_name{ name } {}
+     const std::string get_name() const;
+     FIGURE_LIB_API virtual void print_class();
 };

@@ -4,12 +4,7 @@
 #include "../Figure.h"
 #include "../Triangle.h"
 #include "../Quadrangle.h"
-
-void print_info(Figure* const f)
-{
-    f->print_class();
-    std::cout << std::endl;
-}
+#include "../Print_Info.h"
 
 int main()
 {
