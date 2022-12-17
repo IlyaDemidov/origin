@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.10)
+project(Din_Lib_CMake)
+set(CMAKE_WINDOWS_EXPORT_ALL_SYMBOLS ON)
+add_library(Din_Lib_Figure_CMake SHARED Figure.h Figure.cpp Triangle.h Triangle.cpp Quadrangle.h Quadrangle.cpp)
+add_executable(Figure_Exe Figure_Client.cpp)
+target_link_libraries(Figure_Exe Din_Lib_Figure_CMake)
